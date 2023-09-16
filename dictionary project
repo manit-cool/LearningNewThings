@@ -1,0 +1,30 @@
+#dictionary project:
+print("Welcome to the plant store!\n")
+products = {
+    "Jade Plant": "$10",
+    "Plant Growing Lamp": "$150",
+    "Potting Soil": "$3",
+    "Little pot": "$4",
+    "Medium pot": "$6",
+    "Large pot": "$12"
+}
+print("Products of the day!\n", products)
+
+print("What would you like to order?")
+prdct = input("Order here:")
+lsky = list(products.keys())
+
+if prdct == "Jade Plant":
+    print("you have bought a",lsky[0],"for 10 dollars")
+if prdct == "Plant Growing Lamp":
+    print("you have bought a",lsky[1],"for 150 dollars")
+if prdct == "Potting Soil":
+    print("you have bought ",lsky[2],"for 3 dollars")
+if prdct == "Little pot":
+    print("you have bought a",lsky[3],"for 4 dollars")
+if prdct == "Medium pot":
+    print("you have bought a",lsky[4],"for 6 dollars")
+if prdct == "Large pot":
+    print("you have bought a",lsky[5],"for 12 dollars")
+else:
+    print("We don't have that item currently sorry! Please come back later.")
