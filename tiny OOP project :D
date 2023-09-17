@@ -1,0 +1,42 @@
+#OOP project:
+import sys
+class full_bank:
+    def __init__(self):
+        self.account_name = ""
+        self.account = False
+
+    def account_open(self):
+        if not self.account:
+            print("Hey there, you currently don't have an active account.")
+            self.first = input("You can enter your first name here:")
+            self.last = input("You can enter your last name here:")
+            self.age = int(input("You can input your age here:"))
+            if self.age < 17:
+                print("please exit the bank >=(")
+                sys.exit()
+
+        self.account = True
+
+        if self.account == True:
+            print("You have successfully made your own account would you like to make a transaction? ")
+            self.transact = input("Please enter here yes or no:")
+            if self.transact == "yes" or self.transact == "Yes":
+                print("alright, pls answer a few questions")
+                self.t_fname = input("The persons first name:")
+                self.t_lname = input("The persons last name:")
+                self.t_age = input("The persons age (for verifaction):")
+                self.tmoney = input("How much money are you sending?:")
+                print("Perfect, you have successfully sent",self.tmoney,"to",self.t_fname,self.t_lname)
+            if self.transact == "no" or self.transact == "No":
+                print("Have a great day! Hope to see you again in this section!")
+
+# Create an instance of the accnts class
+my_account = full_bank()
+
+# Call the account_open method
+print("Hey there, welcome to Bank Muscat which is the biggest bank in all of Oman! Are you here to open an account today?")
+AcO = input("You can type over here yes or no: ")
+if AcO == "Yes" or AcO == "yes":
+    my_account.account_open()
+elif AcO == "No" or AcO == "no":
+    print("Have a great day! Hope to see you again in the account opening section!")
